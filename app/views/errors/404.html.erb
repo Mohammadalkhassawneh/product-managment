@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1>Internal Server Error</h1>
+    <% if @error_message.present? %>
+      <p><%= @error_message %></p>
+    <% else %>
+      <p>Sorry, something went wrong on our end. Please try again later.</p>
+    <% end %>
+  </body>
+</html>
