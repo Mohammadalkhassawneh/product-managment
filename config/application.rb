@@ -20,7 +20,7 @@ module VirtualProductManagment
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*' # Allow requests from all origins
-        resource '*', headers: :any, methods: [:get, :post, :options] # Allow GET, POST, and OPTIONS requests
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head] # Allow GET, POST, and OPTIONS requests
       end
     end
     # config.time_zone = "Central Time (US & Canada)"

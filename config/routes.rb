@@ -7,11 +7,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :products, only: [:index, :show]
+      resources :products, only: [:index, :show, :update, :destroy]
       
       # Add the signup route here
       post '/signup', to: 'registrations#create', as: 'signup'
       post '/login', to: 'sessions#create', as: 'login'
+      post '/products', to: 'products#create', as: 'create_product'
       devise_for :users, controllers: {
         registrations: 'api/v1/registrations',
         sessions: 'api/v1/sessions',
